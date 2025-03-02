@@ -1,7 +1,7 @@
 package models;
 import java.util.ArrayList;
 
-public class Deck() {
+public class Deck{
 
     ArrayList<Card> cardsContained;
     long deckID;

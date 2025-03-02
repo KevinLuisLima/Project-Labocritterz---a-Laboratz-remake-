@@ -1,10 +1,10 @@
 package models;
 
 public class Screen {
-    Float height;
-    Float width;
+    int height;
+    int width;
 
-    public Screen(Float height, Float width){
+    public Screen(int height, int width){
         this.height = height;
         this.width = width;
     }

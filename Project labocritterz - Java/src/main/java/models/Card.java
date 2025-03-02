@@ -1,21 +1,22 @@
 package models;
+import com.raylib.Raylib;
 import java.util.ArrayList;
 
 public class Card {
-    Png image;
+    Raylib.Image image;
     long cardID;
     ArrayList<Integer> cardSideValues;
     float height;
     float width;
 
-    public Card(Png image, long cardID, float height, float width){
+    public Card(Raylib.Image image, long cardID, float height, float width){
         this.image = image;
         this.cardID = cardID;
         this.height = height;
         this.width = width;
     }
 
-    public Png getImage(){
+    public Raylib.Image getImage(){
         return image;
     }
     public long getCardID(){

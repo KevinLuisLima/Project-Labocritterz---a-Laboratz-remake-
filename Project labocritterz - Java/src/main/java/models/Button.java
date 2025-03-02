@@ -1,23 +1,24 @@
 package models;
+import com.raylib.Raylib;
 
 public class Button {
-    Rectangle hitbox;
+    Raylib.Rectangle hitbox;
     Float position;
-    Png image;
+    Raylib.Image image;
 
-    public Button(Rectangle hitbox, Float position, Png image){
+    public Button(Raylib.Rectangle hitbox, Float position, Raylib.Image image){
         this.hitbox = hitbox;
         this.position = position;
         this.image = image;
     }
 
-    public Rectangle getHitbox(){
+    public Raylib.Rectangle getHitbox(){
         return hitbox;
     }
     public Float getPosition(){
         return position;
     }
-    public Png getImage(){
+    public Raylib.Image getImage(){
         return image;
     }
 
