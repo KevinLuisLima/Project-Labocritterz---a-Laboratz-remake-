@@ -1,18 +1,19 @@
 package models;
 
+import com.raylib.Raylib;
+
 public class Screen {
     int height;
     int width;
-
     public Screen(int height, int width){
         this.height = height;
         this.width = width;
     }
 
-    public Float getHeight(){
+    public int getHeight(){
         return height;
     }
-    public Float getWidth(){
+    public int getWidth(){
         return width;
     }
 }

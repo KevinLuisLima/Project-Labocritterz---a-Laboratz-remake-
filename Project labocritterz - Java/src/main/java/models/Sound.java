@@ -1,11 +1,12 @@
 package models;
+import com.raylib.Raylib;
 
 public class Sound {
     int waitTime;
     float volume;
-    mp3 soundArchive;
+    Raylib.Sound soundArchive;
 
-    public Sound(mp3 soundArchive){
+    public Sound(Raylib.Sound soundArchive){
         this.soundArchive = soundArchive;
     }
 
@@ -15,7 +16,7 @@ public class Sound {
     public float getVolume(){
         return volume;
     }
-    public mp3 getSoundArchive(){
+    public Raylib.Sound getSoundArchive(){
         return soundArchive;
     }
 

@@ -16,7 +16,7 @@ public class ScreenController {
         this.screen = screen;
     }
 
-    public void initiateScreen(){
+    public void initializeScreen(){
         Raylib.InitWindow(screen.getWidth(),screen.getHeight(),"Labocritterz - Um remake de Laboratz!");
     }
 }
