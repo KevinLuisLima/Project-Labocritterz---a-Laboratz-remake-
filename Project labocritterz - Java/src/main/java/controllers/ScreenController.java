@@ -18,5 +18,6 @@ public class ScreenController {
 
     public void initializeScreen(){
         Raylib.InitWindow(screen.getWidth(),screen.getHeight(),"Labocritterz - Um remake de Laboratz!");
+        Raylib.SetTargetFPS(60);
     }
 }

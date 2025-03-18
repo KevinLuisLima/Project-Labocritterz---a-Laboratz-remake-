@@ -11,4 +11,8 @@ public class MatchController {
     public Match getMatch() {
         return match;
     }
+
+    public void startup(){
+
+    }
 }
