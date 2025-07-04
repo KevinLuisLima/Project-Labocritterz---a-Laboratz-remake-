@@ -1,7 +1,7 @@
 package org.example;
 import com.raylib.Raylib;
 import controllers.GeneralController;
-import models.Image;
+import models.beans.Image;
 
 import static com.raylib.Colors.*;
 

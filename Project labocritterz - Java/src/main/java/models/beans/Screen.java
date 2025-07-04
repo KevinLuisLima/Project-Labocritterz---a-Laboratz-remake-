@@ -1,6 +1,4 @@
-package models;
-
-import com.raylib.Raylib;
+package models.beans;
 
 public class Screen {
     int height;

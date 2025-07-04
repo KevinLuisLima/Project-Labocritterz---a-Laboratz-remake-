@@ -1,6 +1,6 @@
 package controllers;
 import com.raylib.Raylib;
-import models.Sound;
+import models.beans.Sound;
 
 import java.util.ArrayList;
 

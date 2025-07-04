@@ -1,6 +1,6 @@
 package controllers;
 
-import models.Place;
+import models.beans.Place;
 
 public class PlaceController {
     Place place;

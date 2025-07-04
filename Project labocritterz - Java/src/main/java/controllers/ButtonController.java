@@ -1,5 +1,5 @@
 package controllers;
-import models.Button;
+import models.beans.Button;
 
 public class ButtonController {
     Button button;

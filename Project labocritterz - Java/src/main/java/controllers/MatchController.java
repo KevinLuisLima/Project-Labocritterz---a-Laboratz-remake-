@@ -1,6 +1,6 @@
 package controllers;
 
-import models.Match;
+import models.beans.Match;
 
 public class MatchController {
     Match match;

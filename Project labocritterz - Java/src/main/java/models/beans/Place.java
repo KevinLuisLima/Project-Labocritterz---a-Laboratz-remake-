@@ -1,10 +1,10 @@
-package models;
+package models.beans;
 import com.raylib.Raylib;
 
 public class Place {
-    Raylib.Rectangle hitbox;
-    int position;
-    boolean vacant;
+    private Raylib.Rectangle hitbox;
+    private int position;
+    private boolean vacant;
 
     public Place(Raylib.Rectangle hitbox, int position){
         this.hitbox = hitbox;

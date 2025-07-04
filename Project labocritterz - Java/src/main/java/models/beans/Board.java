@@ -1,9 +1,8 @@
-package models;
-
+package models.beans;
 import java.util.ArrayList;
 
 public class Board {
-    ArrayList<Place> placement;
+    private final ArrayList<Place> placement;
 
     public Board(ArrayList<Place> placement){
         this.placement = placement;

@@ -1,6 +1,5 @@
 package controllers;
 import com.raylib.Raylib;
-import models.Image;
 
 import java.util.ArrayList;
 

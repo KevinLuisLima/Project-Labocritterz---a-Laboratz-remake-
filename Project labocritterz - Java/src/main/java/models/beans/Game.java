@@ -1,4 +1,4 @@
-package models;
+package models.beans;
 
 public class Game {
 }

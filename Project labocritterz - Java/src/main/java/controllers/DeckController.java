@@ -1,6 +1,6 @@
 package controllers;
 
-import models.Deck;
+import models.beans.Deck;
 
 public class DeckController {
     Deck deck;

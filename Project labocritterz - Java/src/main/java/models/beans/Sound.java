@@ -1,4 +1,4 @@
-package models;
+package models.beans;
 import com.raylib.Raylib;
 
 public class Sound {

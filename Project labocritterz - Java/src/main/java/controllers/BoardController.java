@@ -1,5 +1,5 @@
 package controllers;
-import models.Board;
+import models.beans.Board;
 
 public class BoardController {
     Board board;

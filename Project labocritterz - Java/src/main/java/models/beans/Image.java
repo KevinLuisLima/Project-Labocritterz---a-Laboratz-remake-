@@ -1,4 +1,4 @@
-package models;
+package models.beans;
 import com.raylib.Raylib;
 
 public class Image {
@@ -12,3 +12,4 @@ public class Image {
         return image;
     }
 }
+//estudar a lógica de como implementar um mét/odo de carregamento das imagens

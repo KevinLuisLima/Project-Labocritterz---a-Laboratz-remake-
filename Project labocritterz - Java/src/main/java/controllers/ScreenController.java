@@ -1,5 +1,5 @@
 package controllers;
-import models.Screen;
+import models.beans.Screen;
 import com.raylib.Raylib;
 
 public class ScreenController {
