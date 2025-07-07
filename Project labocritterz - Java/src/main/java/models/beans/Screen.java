@@ -1,13 +1,12 @@
 package models.beans;
 
 public class Screen {
-    int height;
-    int width;
+    private final int height;
+    private final int width;
     public Screen(int height, int width){
         this.height = height;
         this.width = width;
     }
-
     public int getHeight(){
         return height;
     }

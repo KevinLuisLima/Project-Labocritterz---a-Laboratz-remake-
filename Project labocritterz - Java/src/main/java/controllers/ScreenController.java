@@ -1,11 +1,14 @@
 package controllers;
 import models.beans.Screen;
 import com.raylib.Raylib;
+import models.repository.ScreenRepo;
 
 public class ScreenController {
-    Screen screen;
+    private ScreenRepo repository;
+    private FileManipulator fileManipulator;
+
     public ScreenController(){
-        this.screen = new Screen(720,1280);
+        this.repository = new ScreenRepo(fileManipulator.);
     }
 
     public Screen getScreen() {

@@ -1,7 +1,5 @@
 package controllers;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class FileManipulator {
@@ -10,7 +8,7 @@ public class FileManipulator {
         try {
             String folderPath = "src/main/resources/gameLog";
             String fileName = "configs.log";
-            String content = "resolution 1280 720";
+            String content = "resolution 2";
             File createFolder = new File(folderPath);
             File createFile = new File(folderPath,fileName);
             File createFileOnly = new File(folderPath + "/" + fileName);
@@ -41,6 +39,29 @@ public class FileManipulator {
         return false;
     }
 
-//    public ArrayList<String> fileReader(){
-//    }
+    public String configReader(int line){
+        try{
+            String filePath = "src/main/resources/gameLog/configs.log";
+            File checkFilePath = new File(filePath);
+
+            if (!checkFilePath.exists()){
+                gameFileInit();
+            }
+            ArrayList<String> output = new ArrayList<String>();
+            BufferedReader reader = new BufferedReader(new FileReader(filePath));
+            String read;
+
+            while((read = reader.readLine()) != null){
+                String[] vector = read.split("\n");
+                String instance = vector[0];
+                output.add(instance);
+            }
+            reader.close();
+            String[] lineSplitted = output.get(line).split(" ");
+            
+        }catch (IOException IOE){
+            IOE.printStackTrace();
+        }
+        return null;
+    }
 }
