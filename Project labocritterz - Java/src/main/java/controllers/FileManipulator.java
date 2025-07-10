@@ -39,7 +39,7 @@ public class FileManipulator {
         return false;
     }
 
-    public String configReader(int line){
+    public ArrayList<String> configReader(int line){
         try{
             String filePath = "src/main/resources/gameLog/configs.log";
             File checkFilePath = new File(filePath);
@@ -58,9 +58,15 @@ public class FileManipulator {
             }
             reader.close();
             String[] lineSplitted = output.get(line).split(" ");
-            
-        }catch (IOException IOE){
-            IOE.printStackTrace();
+            ArrayList<String> result = new ArrayList<String>();
+
+            for(int index = 1; index < lineSplitted.length; index++){
+                result.add(lineSplitted[index]);
+            }
+            return result;
+
+        }catch (Exception e){
+            e.printStackTrace();
         }
         return null;
     }

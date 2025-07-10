@@ -3,27 +3,26 @@ import com.raylib.Raylib;
 
 public class Sound {
     int waitTime;
-    float volume;
+//    float volume;
     Raylib.Sound soundArchive;
+    String name;
 
-    public Sound(Raylib.Sound soundArchive){
+    public Sound(Raylib.Sound soundArchive, String name){
         this.soundArchive = soundArchive;
+        this.name = name;
     }
 
     public int getWaitTime(){
         return waitTime;
     }
-    public float getVolume(){
-        return volume;
-    }
     public Raylib.Sound getSoundArchive(){
         return soundArchive;
+    }
+    public String getName(){
+        return name;
     }
 
     public void setWaitTime(int waitTime){
         this.waitTime = waitTime;
-    }
-    public void setVolume(float volume){
-        this.volume = volume;
     }
 }
