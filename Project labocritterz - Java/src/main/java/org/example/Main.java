@@ -1,16 +1,18 @@
 package org.example;
 import controllers.FileManipulator;
 import controllers.ScreenController;
+import controllers.SoundController;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.printf("Hello and welcome!\n");
-        FileManipulator fileManip = new FileManipulator();
-        ScreenController screenCon = new ScreenController();
-        fileManip.gameFileInit();
-//        controller.getScreenController().initializeScreen();
-//        controller.getSoundController().initializeAudioDevice();
-//        Image image = new Image();
+        try {
+            System.out.printf("Hello and welcome!\n");
+            FileManipulator fileManip = new FileManipulator();
+            fileManip.gameFileInit();
+            ScreenController screenCon = new ScreenController();
+            screenCon.initializeScreen();
+            SoundController soundCon = new SoundController();
 //        Raylib.Texture texture = Raylib.LoadTextureFromImage(image.getImage());
 //        while(!Raylib.WindowShouldClose()){
 //            Raylib.BeginDrawing();
@@ -18,5 +20,8 @@ public class Main {
 //            Raylib.ClearBackground(RAYWHITE);
 //            Raylib.EndDrawing();
 //        }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

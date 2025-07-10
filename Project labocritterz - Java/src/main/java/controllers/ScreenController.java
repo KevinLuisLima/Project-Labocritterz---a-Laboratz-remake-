@@ -1,5 +1,4 @@
 package controllers;
-import models.beans.Screen;
 import com.raylib.Raylib;
 import models.repository.ScreenRepo;
 
@@ -8,19 +7,23 @@ public class ScreenController {
     private FileManipulator fileManipulator;
 
     public ScreenController(){
-        this.repository = new ScreenRepo(fileManipulator.);
+        try {
+            this.fileManipulator = new FileManipulator();
+            int selectedResolution = Integer.parseInt((fileManipulator.configReader(0).get(0)));
+            this.repository = new ScreenRepo(selectedResolution);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
-    public Screen getScreen() {
-        return screen;
-    }
-
-    public void setScreen(Screen screen) {
-        this.screen = screen;
-    }
-
-    public void initializeScreen(){
-        Raylib.InitWindow(screen.getWidth(),screen.getHeight(),"Labocritterz - Um remake de Laboratz!");
-        Raylib.SetTargetFPS(60);
+    public boolean initializeScreen(){
+        try {
+            Raylib.InitWindow(repository.getScreenHeight(), repository.getScreenWidth(), "Labocritterz - Um remake de Laboratz!");
+            Raylib.SetTargetFPS(60);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }

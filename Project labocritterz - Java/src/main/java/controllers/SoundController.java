@@ -7,7 +7,6 @@ import java.util.ArrayList;
 public class SoundController {
     ArrayList<Sound> sound;
     public SoundController(){
-        //initialize the sounds
     }
 
     public Sound getSound(int index){
