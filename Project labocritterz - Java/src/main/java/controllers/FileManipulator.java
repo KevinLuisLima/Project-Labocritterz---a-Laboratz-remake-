@@ -1,5 +1,6 @@
 package controllers;
 import java.io.*;
+import java.nio.file.FileSystemException;
 import java.util.ArrayList;
 
 public class FileManipulator {
@@ -66,6 +67,43 @@ public class FileManipulator {
             return result;
 
         }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public ArrayList<String> readArchivePaths(String name){
+        try{
+            String pathName = " ";
+            switch (name){
+                case "Sounds":
+                    pathName = "src/main/resources/Sounds/Paths.log";
+                    break;
+
+                case "Images":
+                    pathName = "src/main/resources/Images/Paths.log";
+                    break;
+            }
+
+            if (!pathName.equals(" ")){
+                File providedPath = new File(pathName);
+                if(!providedPath.exists()){
+                    if(!providedPath.mkdir()){
+                        throw new RuntimeException();
+                    }
+                }
+                ArrayList<String> output = new ArrayList<String>();
+                BufferedReader reader = new BufferedReader(new FileReader(pathName));
+                String read;
+                while((read = reader.readLine()) != null){
+                    String[] vector = read.split("\n");
+                    String instance = vector[0];
+                    output.add(instance);
+                }
+                reader.close();
+                return output;
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;

@@ -1,16 +1,17 @@
 package controllers;
 import com.raylib.Raylib;
 import models.beans.Sound;
+import models.repository.SoundRepo;
 
 import java.util.ArrayList;
 
 public class SoundController {
-    ArrayList<Sound> sound;
+    private SoundRepo repository;
+    private FileManipulator fileManipulator;
     public SoundController(){
-    }
-
-    public Sound getSound(int index){
-        return sound.get(index);
+        this.repository = new SoundRepo();
+        this.fileManipulator = new FileManipulator();
+        initializeAudioDevice();
     }
 
     public void initializeAudioDevice(){
