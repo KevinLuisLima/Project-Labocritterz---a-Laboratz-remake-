@@ -46,6 +46,7 @@ public class FileManipulator {
             File checkFilePath = new File(filePath);
 
             if (!checkFilePath.exists()){
+                System.out.println("Entrou");
                 gameFileInit();
             }
             ArrayList<String> output = new ArrayList<String>();
@@ -84,6 +85,7 @@ public class FileManipulator {
                     pathName = "src/main/resources/Images/Paths.log";
                     break;
             }
+            System.out.println(pathName);
 
             if (!pathName.equals(" ")){
                 File providedPath = new File(pathName);

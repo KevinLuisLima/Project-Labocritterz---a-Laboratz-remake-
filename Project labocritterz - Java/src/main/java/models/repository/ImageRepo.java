@@ -13,7 +13,7 @@ public class ImageRepo {
         }
     }
 
-    public ArrayList<Image> getObject() {
+    public ArrayList<Image> getImages() {
         return object;
     }
 }

@@ -1,17 +1,30 @@
 package controllers;
 import com.raylib.Raylib;
-
-import java.util.ArrayList;
+import models.repository.ImageRepo;
+import static com.raylib.Colors.WHITE;
 
 public class ImageController {
-    ArrayList<Raylib.Image> image;
+    private ImageRepo repository;
+    private FileManipulator fileManipulator = new FileManipulator();
 
-    public ImageController(){
-        //Image image = new Image();
-        //this.image.add(image.getImage());
+    public ImageController() {
+        try {
+            this.repository = new ImageRepo(fileManipulator.readArchivePaths("Images"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
-    public Raylib.Image getImage(int index) {
-        return image.get(index);
+    public void drawnImagesFor(String currentScreen) {
+        try {
+            switch (currentScreen){
+                case "Menu":
+                    Raylib.Texture texture = Raylib.LoadTextureFromImage(repository.getImages().get(0).getImage());
+                    Raylib.DrawTexture(texture,0,0,WHITE);
+                    break;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

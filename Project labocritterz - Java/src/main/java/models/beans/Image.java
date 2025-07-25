@@ -2,8 +2,7 @@ package models.beans;
 import com.raylib.Raylib;
 
 public class Image {
-    Raylib.Image image;
-
+    Raylib.Image image = new Raylib.Image();
 
     public Raylib.Image getImage() {
         return image;
